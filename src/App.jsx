@@ -17,9 +17,17 @@ export default function App() {
 
   const HandleSubmitForm = async (e) => {
     e.preventDefault();
+    function formatUserName (username){
+      if(username.includes('@')){
+          return username
+      }
+      else{
+          return `@${username.split('/')[username.split('/').length - 1 ]}`
+      }
+  }
     const message =
       `Новая идея проекта:\n\n` +
-      `*Никнейм*: ${inp1}\n\n` +
+      `*Никнейм*: ${formatUserName(inp1)}\n\n` +
       `*Идея*: ${inp2}\n\n` +
       `*Проблемы*: ${inp3}\n\n` +
       `*Целевая аудитория*: ${inp4}\n\n` +
@@ -224,3 +232,4 @@ export default function App() {
     </React.Fragment>
   )
 }
+
