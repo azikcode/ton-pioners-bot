@@ -14,8 +14,6 @@ export default function App() {
   const [inp8, set8] = useState("");
   const [inp9, set9] = useState("");
   const [inp10, set10] = useState("");
-  console.log(import.meta.env.VITE_BOT_TOKEN);
-  console.log(import.meta.env.VITE_CHAT_ID);
   const HandleSubmitForm = async (e) => {
     e.preventDefault();
     function formatUserName (username){
